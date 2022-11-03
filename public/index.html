@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Add Consignment</div>
+    <div class="content">
+      <form action="/" method="post">
+        <div class="consignment-details">
+          <div class="input-box">
+            <span class="details">Ship From</span>
+            <input type="text" placeholder="Enter Source" required name="shipFrom">
+          </div>
+          <div class="input-box">
+            <span class="details">Ship To</span>
+            <input type="text" placeholder="Enter Destination" required name="shipTo">
+          </div>
+          <div class="input-box">
+            <span class="details">Commodity</span>
+            <input type="text" placeholder="Enter Commodity" required name="commodity">
+          </div>
+          <div class="input-box">
+            <span class="details">Order Value</span>
+            <input type="number" placeholder="Enter Order Value" required name="orderValue">
+          </div>
+          <div class="input-box">
+            <span class="details">Weight(KG)</span>
+            <input type="number" placeholder="Enter weight" required name="weight">
+          </div>
+          <div class="input-box">
+            <span class="details">Volume</span>
+            <input type="number" placeholder="Enter Volume" required name="volume">
+          </div>
+          <div class="input-box">
+            <span class="details">Shipper Name</span>
+            <input type="text" placeholder="Enter Shipper Name" required name="shipperName">
+          </div>
+          <div class="input-box">
+            <span class="details">Shipper Address</span>
+            <input type="text" placeholder="Enter Shipper Address" required name="shipperAddress">
+          </div>
+          <div class="input-box">
+            <span class="details">Shipper Country</span>
+            <input type="text" placeholder="Enter Shipper Country" required name="shipperCountry">
+          </div>
+          <div class="input-box">
+            <span class="details">Consignee</span>
+            <input type="text" placeholder="Enter Consignee" required name="consignee">
+          </div>
+          <div class="input-box">
+            <span class="details">Order date</span>
+            <input type="date" placeholder="Enter Order Date" name="orderDate">
+          </div>
+          <div class="input-box">
+            <span class="details">Required date</span>
+            <input type="date" placeholder="Enter Required Date" name="requiredDate">
+          </div>
+        </div>
+       
+        <div class="button">
+          <input type="submit" value="Add" name="button">
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
