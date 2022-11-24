@@ -16,10 +16,10 @@ app.use(express.urlencoded({ extended: true }))
 
 var connection = mysql.createConnection({
     host: "localhost",
-    port: 8111,
-    database: "majorproject",
+    port: 3306,
+    database:'gatishakti',
     user: "root",
-    password: ""
+    password: "",
   })
 
 connection.connect(function(err) {
@@ -33,7 +33,7 @@ app.get('/', (req, res)=>{
 })
 
 function insertData(data){
-    var sql = "INSERT INTO orderdetails(shipFrom, shipTo, commodity, orderValue, weight, volume, shipperName, shipperAddress, shipperCountry, consignee, orderDate, requiredDate) VALUES ?";
+    var sql = "INSERT INTO orders(Ship_From, Ship_To, Commodity, Order_Value, Weight_KG, Volume, Order_Date, Required_Delivery_Date) VALUES ?";
     var values = [data];
     connection.query(sql, [values], (err, res)=>{
         if(err)throw err;
@@ -49,5 +49,5 @@ app.post('/', (req, res)=>{
     var data = Object.values(req.body);
     data.pop();
     insertData(data);
-    res.send(req.body);
+    res.redirect('back');
 })
